@@ -25,6 +25,8 @@ public class Transform
         get => new Vector3(_rotation.X, _rotation.Y, _rotation.Z);
         set => _rotation = Quaternion.CreateFromYawPitchRoll(value.X, value.Y, value.Z);
     }
+    
+    public (Vector3 Forward, Vector3 Up) DirectionVectors => (Vector3.Transform(_forward, Rotation), Vector3.Transform(_up, Rotation));
 
     public Transform(Vector3? position = null, Vector3? rotation = null, Vector3? scale = null)
     {
@@ -38,10 +40,5 @@ public class Transform
         Position = position ?? Vector3.Zero;
         Rotation = rotation ?? Quaternion.CreateFromYawPitchRoll(0,0,0);
         Scale = scale ?? Vector3.One;
-    }
-
-    public (Vector3 Forward, Vector3 Up) ConvertToDirectionVectors()
-    {
-        return (Vector3.Transform(_forward, Rotation), Vector3.Transform(_up, Rotation));
     }
 }
