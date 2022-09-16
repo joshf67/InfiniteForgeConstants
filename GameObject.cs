@@ -12,11 +12,11 @@ public class GameObject
     public Material? Material;
     public AdditonalObjectSettings? ObjectSettings;
 
-    public GameObject(string? name = "Object", Transform? transform = null, ObjectId? objectId = ObjectId.PRIMITIVE_BLOCK, AdditonalObjectSettings? objectSettings = null, Material? material = null)
+    public GameObject(string? name = "Object", ObjectId? objectId = ObjectId.PRIMITIVE_BLOCK, Transform? transform = null, AdditonalObjectSettings? objectSettings = null, Material? material = null)
     {
         Name = name ?? "Object";
-        Transform = transform ?? new Transform();
         ObjectId = objectId ?? ObjectId.PRIMITIVE_BLOCK;
+        Transform = transform ?? new Transform();
         ObjectSettings = objectSettings;
         Material = material;
     }
