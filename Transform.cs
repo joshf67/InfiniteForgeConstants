@@ -10,7 +10,8 @@ public class Transform
     public Vector3 Position;
     public Vector3 ImperialPosition => Position * 3.2808f;
     public Vector3 MetricPosition => Position / 3.2808f;
-
+    
+    public bool IsStatic;
     public Vector3 Scale;
     
     private Quaternion _rotation;
@@ -28,17 +29,19 @@ public class Transform
     
     public (Vector3 Forward, Vector3 Up) DirectionVectors => (Vector3.Transform(_forward, Rotation), Vector3.Transform(_up, Rotation));
 
-    public Transform(Vector3? position = null, Vector3? rotation = null, Vector3? scale = null)
+    public Transform(Vector3? position = null, Vector3? rotation = null, bool? isStatic = false, Vector3? scale = null)
     {
         Position = position ?? Vector3.Zero;
         EulerRotation = rotation ?? Vector3.Zero;
+        IsStatic = isStatic ?? false;
         Scale = scale ?? Vector3.One;
     }
 
-    public Transform(Vector3? position, Quaternion? rotation, Vector3? scale)
+    public Transform(Vector3? position, Quaternion? rotation, bool? isStatic = false, Vector3? scale = null)
     {
         Position = position ?? Vector3.Zero;
         Rotation = rotation ?? Quaternion.CreateFromYawPitchRoll(0,0,0);
+        IsStatic = isStatic ?? false;
         Scale = scale ?? Vector3.One;
     }
 }
