@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace InfiniteForgeConstants;
+namespace InfiniteForgeConstants.ObjectSettings;
 
 public class Transform
 {

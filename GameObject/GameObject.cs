@@ -1,7 +1,6 @@
 using InfiniteForgeConstants.MaterialSettings;
-using InfiniteForgeConstants.ObjectSettings;
 
-namespace InfiniteForgeConstants;
+namespace InfiniteForgeConstants.ObjectSettings;
 
 public class GameObject
 {

@@ -1,4 +1,4 @@
-namespace InfiniteForgeConstants;
+namespace InfiniteForgeConstants.ObjectSettings;
 
 public enum ObjectId
 {
