@@ -1,4 +1,4 @@
-namespace InfiniteForgeConstants;
+namespace InfiniteForgeConstants.MapSettings;
 
 public enum MapId
 {
