@@ -37,11 +37,33 @@ public class Transform
         Scale = scale ?? Vector3.One;
     }
 
-    public Transform(Vector3? position, Quaternion? rotation, bool? isStatic = false, Vector3? scale = null)
+    public Transform(Vector3 position, (Vector3 Forward, Vector3 Up) directionVectors,
+        bool? isStatic = false, Vector3? scale = null)
     {
-        Position = position ?? Vector3.Zero;
-        Rotation = rotation ?? Quaternion.CreateFromYawPitchRoll(0,0,0);
+        Position = position;
+        EulerRotation = DirectionToEuler(directionVectors.Forward, directionVectors.Up).Degrees;
         IsStatic = isStatic ?? false;
         Scale = scale ?? Vector3.One;
     }
+
+    public Transform(Vector3? position, Quaternion? rotation, bool? isStatic = false, Vector3? scale = null)
+    {
+        Position = position ?? Vector3.Zero;
+        Rotation = rotation ?? Quaternion.CreateFromYawPitchRoll(0, 0, 0);
+        IsStatic = isStatic ?? false;
+        Scale = scale ?? Vector3.One;
+    }
+    
+    public static (Vector3 Radians, Vector3 Degrees) DirectionToEuler(Vector3 forward, Vector3 up)
+    {
+        var z = MathF.Acos(Vector3.Dot(Vector3.UnitX, Vector3.Normalize(forward with { Z = 0 }))) *
+                Vector3.Normalize(new Vector3(0, forward.Y, 0)).Y;
+
+        var y = MathF.Acos(Vector3.Dot(Vector3.UnitZ, forward)) - (MathF.PI / 2);
+
+        var x = MathF.Acos(Vector3.Dot(Vector3.UnitZ, Vector3.Cross(forward, up)));
+
+        return (new Vector3(x, y, z), new Vector3(x, y, z) * (180 / MathF.PI));
+    }
+    
 }
