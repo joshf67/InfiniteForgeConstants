@@ -10,12 +10,12 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 - **MapId**: All map ids
 
 ### Classes
-- **Map** = The Class that roughly represents the .mvar file, This is the highest level object in the hierarchy
+- **Map**: The Class that roughly represents the .mvar file, This is the highest level object in the hierarchy
 
-- **GameObject** Main Class for objects, Holds reference to required data about a forge object
+- **GameObject**: Main Class for objects, Holds reference to required data about a forge object
 
-- **Transform** Generic Position, Rotation and Scale variables stored in 1 class with helper functions
-- **AdditonalObjectSettings** = Used for other stuff like variant ids etc
+- **Transform**: Generic Position, Rotation and Scale variables stored in 1 class with helper functions
+- **AdditonalObjectSettings**: Used for other stuff like variant ids etc
 
 #### Material Classes
 
