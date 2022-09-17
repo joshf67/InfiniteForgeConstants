@@ -23,7 +23,7 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 - **GameObject**: Main Class for objects, Holds reference to required data about a forge object
 - **Transform**: Generic Position, Rotation and Scale variables stored in one class with helper functions
 ```diff
-+ thanks to **Artifice** for the conversion from direction vectors to euler angles
++ thanks to Artifice for the conversion from direction vectors to euler angles
 ```
 - **AdditonalObjectSettings**: Used for other stuff like variant ids etc
 
