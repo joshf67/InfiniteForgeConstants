@@ -60,10 +60,16 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 #### Classes
 
 - **MapOptions**: Class to hold all data about the map
-- **AmbientSound**: Class to hold all data about a map's sound options
 - **Sunlight**: Options to control a map's sunlight
+- **LightBounce**: Options to control a map's light bounce
 - **Skylight**: Options to control a map's skylight
 - **DirectionalSkyLight**: Options to override a map's Skylight options
-- **LightBounce**: Options to control a map's light bounce
+- **WindDirection**: Options to control a map's wind
+- **VolumetricFog**: Options to control a map's volumetric fog
+- **SkyRendering**: Options to control a map's sky rendering
+- **AtmosphericFog**: Options to control a map's atmospheric fog
+- **AmbientSound**: Class to hold all data about a map's sound options
+
+
 
 ---
