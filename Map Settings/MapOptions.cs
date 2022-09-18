@@ -9,10 +9,10 @@ public class MapOptions
     public LightBounce? LightBounce;
     public SkyLight? SkyLight;
     public DirectionalSkyLight? DirectionalSkyLight;
-    public Vector3? WindDirection;
+    public WindDirection? WindDirection;
 
     public MapOptions(Sunlight? sunlight = null, LightBounce? lightBounce = null, SkyLight? skyLight = null,
-        DirectionalSkyLight? directionalSkyLight = null, Vector3? windDirection = null)
+        DirectionalSkyLight? directionalSkyLight = null, WindDirection? windDirection = null)
     {
         Sunlight = sunlight;
         LightBounce = lightBounce;
