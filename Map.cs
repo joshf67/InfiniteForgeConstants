@@ -13,7 +13,7 @@ public class Map
     public AmbientSound? AmbientSound;
     public List<GameObject>? GameObjects;
 
-    public Map(MapId mapId = MapSettings.MapId.AQUARIUS, bool? decorators = null, ScreenEffectId? screenEffectId = null,
+    public Map(MapId? mapId = MapSettings.MapId.AQUARIUS, bool? decorators = null, ScreenEffectId? screenEffectId = null,
         MapOptions? options = null, AmbientSound? ambientSound = null, List<GameObject>? gameObjects = null)
     {
         MapId = mapId;
