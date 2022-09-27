@@ -1,5 +1,13 @@
-﻿namespace InfiniteForgeConstants.NodeGraphSettings;
+﻿// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
 
+namespace InfiniteForgeConstants.NodeGraphSettings;
+
+/// <summary>
+/// Enum that contains equipment type ids used in equipment NodeGraph nodes.
+/// </summary>
 public enum EquipmentTypes
 {
     DROP_WALL = 0,

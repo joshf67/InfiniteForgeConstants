@@ -18,6 +18,7 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 #### Enums
 
 - **ObjectId**:  All known forge object's object ids
+- **PhysicsType**:  All known forge object's object ids
  
 #### Classes
 - **GameObject**: Main Class for objects, Holds reference to required data about a forge object

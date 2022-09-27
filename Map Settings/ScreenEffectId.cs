@@ -1,5 +1,13 @@
+// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
+
 namespace InfiniteForgeConstants.MapSettings;
 
+/// <summary>
+/// Enum that contains screen effect ids used in map's screen effect settings
+/// </summary>
 public enum ScreenEffectId
 {
     DUST_HEAVY = 1446549026,

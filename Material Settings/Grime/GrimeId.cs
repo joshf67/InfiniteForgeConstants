@@ -1,5 +1,13 @@
+// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
+
 namespace InfiniteForgeConstants.MaterialSettings.Grime;
 
+/// <summary>
+/// Enum that contains grime ids used in texturing object's grime
+/// </summary>
 public enum GrimeId
 {
     ALGAE = -1307712632,

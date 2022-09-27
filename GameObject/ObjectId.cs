@@ -1,5 +1,13 @@
+// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
+
 namespace InfiniteForgeConstants.ObjectSettings;
 
+/// <summary>
+/// Enum that contains all forge object Ids used to determine what object they should be
+/// </summary>
 public enum ObjectId
 {
     AC_UNIT_LARGE = -517234322,

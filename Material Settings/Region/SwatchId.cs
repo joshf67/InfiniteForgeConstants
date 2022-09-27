@@ -1,5 +1,13 @@
+// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
+
 namespace InfiniteForgeConstants.MaterialSettings.Region;
 
+/// <summary>
+/// Enum that contains swatch ids used in texturing object's materials.
+/// </summary>
 public enum SwatchId
 {
     ALGAE = -1307712632,

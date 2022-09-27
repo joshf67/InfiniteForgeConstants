@@ -1,5 +1,13 @@
-﻿namespace InfiniteForgeConstants.NodeGraphSettings;
+﻿// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
+// ReSharper disable CheckNamespace
+#pragma warning disable CS1591
 
+namespace InfiniteForgeConstants.NodeGraphSettings;
+
+/// <summary>
+/// Enum that contains weapon combination configuration type ids used in weapon combination NodeGraph nodes.
+/// </summary>
 public enum WeaponCombinationConfigurationTypes
 {
     BR75_BREACHER = 0,
