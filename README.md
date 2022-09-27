@@ -71,5 +71,22 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 - **AmbientSound**: Class to hold all data about a map's sound options
 
 
+---
+
+
+### Map Options
+**Namespace**: NodeGraphSettings
+
+#### Enums
+
+- **EquipmentTypes**: All Node Graph equipment types selectable when using equipment nodes
+- **GrenadeTypes**: All Node Graph grenade types selectable when using grenade nodes
+- **StringTypes**: All Node Graph strings selectable when using string nodes
+- **TeamTypes**: All Node Graph equipment types selectable when using team nodes
+- **VehicleTypes**: All Node Graph equipment types selectable when using vehicle nodes
+- **WeaponTypes**: All Node Graph base weapon types selectable when using weapon nodes
+- **WeaponCombinationBaseTypes**: All Node Graph base weapon types selectable when combining weapon types
+- **WeaponCombinationConfigurationTypes**: All Node Graph configuration types selectable when combining weapon types
+
 
 ---
