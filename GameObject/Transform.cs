@@ -7,14 +7,20 @@ public class Transform
     private readonly Vector3 _forward = new Vector3(0, 0, 1);
     private readonly Vector3 _up = new Vector3(0, 1, 0);
 
+    /// <summary>
+    /// (0 Normal, 1 Fixed, 2 Phased)
+    /// </summary>
+    public PhysicsMode PhysicsMode { get; set; } = PhysicsMode.PHASED;
+
     public Vector3 Position;
     public Vector3 ImperialPosition => Position * 3.2808f;
     public Vector3 MetricPosition => Position / 3.2808f;
-    
+
     public bool IsStatic;
     public Vector3 Scale;
-    
+
     private Quaternion _rotation;
+
     public Quaternion Rotation
     {
         get => _rotation;
@@ -26,8 +32,9 @@ public class Transform
         get => new Vector3(_rotation.X, _rotation.Y, _rotation.Z);
         set => _rotation = Quaternion.CreateFromYawPitchRoll(value.X, value.Y, value.Z);
     }
-    
-    public (Vector3 Forward, Vector3 Up) DirectionVectors => (Vector3.Transform(_forward, Rotation), Vector3.Transform(_up, Rotation));
+
+    public (Vector3 Forward, Vector3 Up) DirectionVectors =>
+        (Vector3.Transform(_forward, Rotation), Vector3.Transform(_up, Rotation));
 
     public Transform(Vector3? position = null, Vector3? rotation = null, bool? isStatic = false, Vector3? scale = null)
     {
@@ -53,7 +60,7 @@ public class Transform
         IsStatic = isStatic ?? false;
         Scale = scale ?? Vector3.One;
     }
-    
+
     public static (Vector3 Radians, Vector3 Degrees) DirectionToEuler(Vector3 forward, Vector3 up)
     {
         var z = MathF.Acos(Vector3.Dot(Vector3.UnitX, Vector3.Normalize(forward with { Z = 0 }))) *
@@ -65,5 +72,11 @@ public class Transform
 
         return (new Vector3(x, y, z), new Vector3(x, y, z) * (180 / MathF.PI));
     }
-    
+}
+
+public enum PhysicsMode
+{
+    NORMAL = 0,
+    FIXED = 1,
+    PHASED = 2
 }
