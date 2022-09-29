@@ -3,6 +3,7 @@
 // ReSharper disable CheckNamespace
 // ReSharper disable ClassNeverInstantiated.Global
 // ReSharper disable MemberCanBePrivate.Global
+
 #pragma warning disable CS1591
 
 using InfiniteForgeConstants.MaterialSettings;
@@ -29,7 +30,8 @@ public class GameObject
     /// <param name="transform"> The data that relates to positioning/rotation... etc of this object. </param>
     /// <param name="objectSettings"> The additional data this object may require. </param>
     /// <param name="material"> The material data this object has. </param>
-    public GameObject(string? name = "Object", ObjectId? objectId = ObjectId.PRIMITIVE_BLOCK, Transform? transform = null, AdditionalObjectSettings? objectSettings = null, Material? material = null)
+    public GameObject(string? name = "Object", ObjectId? objectId = ObjectId.PRIMITIVE_BLOCK,
+        Transform? transform = null, AdditionalObjectSettings? objectSettings = null, Material? material = null)
     {
         Name = name ?? "Object";
         ObjectId = objectId ?? ObjectId.PRIMITIVE_BLOCK;
@@ -38,5 +40,4 @@ public class GameObject
         ObjectSettings = objectSettings;
         Material = material;
     }
-
 }
