@@ -18,7 +18,7 @@ public class AdditionalObjectSettings
     /// Create an object's additional settings.
     /// </summary>
     /// <param name="variantId"> The variant Id to use when this object has one. </param>
-    public AdditionalObjectSettings(int variantId)
+    public AdditionalObjectSettings(int variantId = 0)
     {
         VariantId = variantId;
     }
