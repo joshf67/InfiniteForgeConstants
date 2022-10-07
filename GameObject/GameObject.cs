@@ -37,7 +37,6 @@ public class GameObject
         ObjectId = objectId ?? ObjectId.PRIMITIVE_BLOCK;
         Transform = transform ?? new Transform();
         ObjectSettings = objectSettings ?? new AdditionalObjectSettings();
-        ObjectSettings = objectSettings;
         Material = material;
     }
 }
