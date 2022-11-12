@@ -1,5 +1,7 @@
 # InfiniteForgeConstants
 
+## This project is still in development but is currently DOA due to 343's stance on user generated content
+
 A baseline data structure of halo infinite's forge objects to increase code interoperability.
 
 [.mvar cheat sheet](https://gist.github.com/joshf67/7cc15f31e54db7466671d84e4f9b1630)
