@@ -112,6 +112,9 @@ public class Transform
     /// <returns> The euler rotation in radians and degrees </returns>
     public static (Vector3 Radians, Vector3 Degrees) DirectionToEuler(Vector3 forward, Vector3 up)
     {
+        if (forward == Vector3.Zero && up == Vector3.Zero || forward == up)
+            return (Vector3.Zero, Vector3.Zero);
+            
         var z = MathF.Acos(Vector3.Dot(Vector3.UnitX, Vector3.Normalize(forward with { Z = 0 }))) *
                 Vector3.Normalize(new Vector3(0, forward.Y, 0)).Y;
 
