@@ -42,7 +42,7 @@ public class Transform
     /// </summary>
     public Vector3 EulerRotation
     {
-        get => new Vector3(_rotation.X, _rotation.Y, _rotation.Z);
+        get => new Vector3(_rotation.X, _rotation.Y, _rotation.Z) * (float)(180 / Math.PI);
         set => _rotation = Quaternion.CreateFromYawPitchRoll(value.X, value.Y, value.Z);
     }
 
