@@ -4,7 +4,7 @@ public abstract class ForgeUICategory
 {
     public string CategoryName;
     public int CategoryOrder;
-    public Dictionary<string, ForgeUIFolder> CategoryFolders;
+    public Dictionary<string, ForgeUIFolder> CategoryFolders = new();
 
     public ForgeUICategory(string categoryName, int categoryOrder)
     {
@@ -16,14 +16,14 @@ public abstract class ForgeUICategory
     {
         if (CategoryFolders.ContainsKey(forgeUIFolder.FolderName))
             throw new InvalidOperationException($"Folder {forgeUIFolder.FolderName} already exists inside category.");
-        
+
         if (folderOrder == -1) folderOrder = CategoryFolders.Count + 1;
         forgeUIFolder.FolderOffset = folderOrder;
         forgeUIFolder.ParentCategory = this;
-        
+
         CategoryFolders.Add(forgeUIFolder.FolderName, forgeUIFolder);
     }
-    
+
     public ForgeUIObject AddItem(string folderName, string objectName, int objectOrder)
     {
         if (!CategoryFolders.ContainsKey(folderName))
