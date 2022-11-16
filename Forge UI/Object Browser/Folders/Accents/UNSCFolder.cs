@@ -7,7 +7,7 @@ public class UNSCFolder : ForgeUIFolder
         AddItem("Angled Wall Insert");
         AddItem("Angled Wire Fence");
         AddItem("Bridge Support Pillar");
-        AddItem("Bulkheada");
+        AddItem("Bulkhead");
         AddItem("Bullet Pile Large");
         AddItem("Bullet Pile Small");
         AddItem("Canvas Bag");
@@ -67,7 +67,7 @@ public class UNSCFolder : ForgeUIFolder
         AddItem("Roof Hatch Vent");
         AddItem("Rooftop A");
         AddItem("Round Platform");
-        AddItem("Sleeping Bag Packedh");
+        AddItem("Sleeping Bag Packed");
         AddItem("Sleeping Bag Unrolled");
         AddItem("Target - Small");
         AddItem("Trim Beam A");
