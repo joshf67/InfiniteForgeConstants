@@ -2,7 +2,7 @@ namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
 
 public static class ForgeObjectBrowser
 {
-    public static Dictionary<string, ForgeUICategory> Categories = new Dictionary<string, ForgeUICategory>()
+    public static SortedDictionary<string, ForgeUICategory> Categories = new()
     {
         { "Recents", new RecentsCategory(1) },
         { "Prefabs", new PrefabsCategory(2) },

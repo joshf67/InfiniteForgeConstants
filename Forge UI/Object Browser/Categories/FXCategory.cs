@@ -9,7 +9,6 @@ public class FXCategory : ForgeUICategory
         AddFolder(new AmbientLifeFolder());
         AddFolder(new AtmosphericsFolder());
         AddFolder(new EnergyFolder());
-        AddFolder(new EnergyFolder());
         AddFolder(new ExplosionsFolder());
         AddFolder(new FireFolder());
         AddFolder(new GeneralFolder());

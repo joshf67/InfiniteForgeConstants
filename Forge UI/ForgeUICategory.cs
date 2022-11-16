@@ -4,7 +4,7 @@ public abstract class ForgeUICategory
 {
     public string CategoryName;
     public int CategoryOrder;
-    public Dictionary<string, ForgeUIFolder> CategoryFolders = new();
+    public SortedDictionary<string, ForgeUIFolder> CategoryFolders = new();
 
     public ForgeUICategory(string categoryName, int categoryOrder)
     {
