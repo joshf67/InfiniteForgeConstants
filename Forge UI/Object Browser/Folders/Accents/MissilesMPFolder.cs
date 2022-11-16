@@ -4,6 +4,7 @@ public class MissilesMPFolder : ForgeUIFolder
 {
     public MissilesMPFolder() : base("Missiles_MP")
     {
-        
+        AddItem("Sabre Missile MP");
+        AddItem("Sabre Missile Rack MP");
     }
 }

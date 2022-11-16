@@ -1,7 +1,10 @@
+using System.Text.Json.Serialization;
+
 namespace InfiniteForgeConstants.Forge_UI;
 
 public class ForgeUIObject
 {
+    [JsonIgnore]
     public ForgeUIFolder ParentFolder;
     public string ObjectName;
     public int ObjectOrder;
