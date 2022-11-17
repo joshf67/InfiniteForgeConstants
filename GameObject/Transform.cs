@@ -121,8 +121,8 @@ public class Transform
         
         var y = MathF.Atan2(forward.Z, MathF.Sqrt(forward.X * forward.X + forward.Y * forward.Y));
  
-        if (y > MathF.PI / 2) { y -= MathF.PI / 2; }
-        if (y < -MathF.PI / 2) { y += MathF.PI / 2; }
+        if (y > MathF.PI / 2) { y = MathF.PI - y; }
+        if (y < -MathF.PI / 2) { y = -MathF.PI - y; }
         
         var x = MathF.Atan2(Vector3.Dot(forward, Vector3.Cross(rollvec, up)), Vector3.Dot(rollvec, up));
 
