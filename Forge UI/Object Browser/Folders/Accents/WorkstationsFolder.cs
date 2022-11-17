@@ -4,12 +4,6 @@ public class WorkstationsFolder : ForgeUIFolder
 {
     public WorkstationsFolder() : base("Workstations")
     {
-        AddItem("Holotable A");
-        AddItem("Holotable B");
-        AddItem("Workstation A");
-        AddItem("Workstation B");
-        AddItem("Workstation C");
-        AddItem("Workstation D");
-        AddItem("Workstation Partition");
+
     }
 }
