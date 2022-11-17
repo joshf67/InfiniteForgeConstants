@@ -93,3 +93,20 @@ A baseline data structure of halo infinite's forge objects to increase code inte
 
 
 ---
+
+### Forge UI
+**Namespace**: Forge_UI
+
+#### Enums
+
+- **ForgeUIObjectModeEnum**: All valid scaling options 
+
+#### Classes
+
+- **ForgeUICategory**: Holds all main level UI options in the content browser tab
+- **ForgeUIFolder**: Holds all middle level "folders" that contain all objects
+- **ForgeUIObject**: Holds all low level individual object data
+- **ForgeObjectBrowser**: Static class that contains all the object browser data
+
+
+---
