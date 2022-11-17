@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace InfiniteForgeConstants.Forge_UI;
 
 public abstract class ForgeUICategory
@@ -24,13 +26,13 @@ public abstract class ForgeUICategory
         CategoryFolders.Add(forgeUIFolder.FolderName, forgeUIFolder);
     }
 
-    public ForgeUIObject AddItem(string folderName, string objectName, int objectOrder)
+    public ForgeUIObject AddItem(string folderName, string objectName, Vector3? defaultScale = null, int objectOrder = -1)
     {
         if (!CategoryFolders.ContainsKey(folderName))
             throw new InvalidOperationException($"Folder {folderName} doesn't exist in this category.");
 
         var folder = CategoryFolders[folderName];
-        return folder.AddItem(objectName, objectOrder);
+        return folder.AddItem(objectName, defaultScale, objectOrder);
     }
 
     public void AddItem(string folderName, ForgeUIObject forgeUIObject)
