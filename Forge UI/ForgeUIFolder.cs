@@ -18,14 +18,14 @@ public abstract class ForgeUIFolder
         FolderOffset = folderOffset;
     }
 
-    public ForgeUIObject AddItem(string objectName, Vector3? defaultScale = null, int objectOrder = -1)
+    public ForgeUIObject AddItem(string objectName, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, int objectOrder = -1)
     {
         if (FolderObjects.ContainsKey(objectName))
             throw new InvalidOperationException($"Object {objectName} already exists inside folder.");
 
         if (objectOrder == -1) objectOrder = FolderObjects.Count + 1;
 
-        var ret = new ForgeUIObject(objectName, objectOrder, defaultScale, this);
+        var ret = new ForgeUIObject(objectName, objectOrder, defaultObjectMode, defaultScale, this);
         FolderObjects.Add(objectName, ret);
         return ret;
     }

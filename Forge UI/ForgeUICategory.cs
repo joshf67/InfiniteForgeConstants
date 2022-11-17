@@ -26,13 +26,13 @@ public abstract class ForgeUICategory
         CategoryFolders.Add(forgeUIFolder.FolderName, forgeUIFolder);
     }
 
-    public ForgeUIObject AddItem(string folderName, string objectName, Vector3? defaultScale = null, int objectOrder = -1)
+    public ForgeUIObject AddItem(string folderName, string objectName, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, int objectOrder = -1)
     {
         if (!CategoryFolders.ContainsKey(folderName))
             throw new InvalidOperationException($"Folder {folderName} doesn't exist in this category.");
 
         var folder = CategoryFolders[folderName];
-        return folder.AddItem(objectName, defaultScale, objectOrder);
+        return folder.AddItem(objectName, defaultObjectMode, defaultScale, objectOrder);
     }
 
     public void AddItem(string folderName, ForgeUIObject forgeUIObject)
