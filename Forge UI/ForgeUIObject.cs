@@ -5,8 +5,7 @@ namespace InfiniteForgeConstants.Forge_UI;
 
 public class ForgeUIObject
 {
-    [JsonIgnore]
-    public ForgeUIFolder ParentFolder;
+    [JsonIgnore] public ForgeUIFolder ParentFolder;
     public string ObjectName;
     public int ObjectOrder;
     public Vector3 DefaultScale;

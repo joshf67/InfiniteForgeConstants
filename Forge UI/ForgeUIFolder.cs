@@ -5,8 +5,8 @@ namespace InfiniteForgeConstants.Forge_UI;
 
 public abstract class ForgeUIFolder
 {
-    [JsonIgnore]
-    public ForgeUICategory? ParentCategory;
+    
+    [JsonIgnore] public ForgeUICategory? ParentCategory;
     public string FolderName = "";
     public int FolderOffset = -1;
     public SortedDictionary<string, ForgeUIObject> FolderObjects = new();
