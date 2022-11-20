@@ -4,8 +4,6 @@ public class ConesFolder : ForgeUIFolder
 {
     public ConesFolder() : base("Cones")
     {
-        AddItem("Forerunner_Cone");
-        AddItem("Primitive_Cone");
-        AddItem("UNSC_Cone");
+        
     }
 }
