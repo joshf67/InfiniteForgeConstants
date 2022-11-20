@@ -1,5 +1,10 @@
+using InfiniteForgeConstants.ObjectSettings;
+
 namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
 
+/// <summary>
+/// Stores all data related to the forge object browser UI
+/// </summary>
 public static class ForgeObjectBrowser
 {
     public static SortedDictionary<string, ForgeUICategory> Categories = new()
@@ -18,4 +23,42 @@ public static class ForgeObjectBrowser
         { "Props", new PropsCategory(12) },
         { "Structures", new StructuresCategory(13) }
     };
+
+    /// <summary>
+    /// Find an item within any category using the object name
+    /// </summary>
+    /// <param name="objectName"> The name of the forge UI object </param>
+    /// <param name="forgeObject"> The forge UI object that was found </param>
+    /// <returns> bool if the object exists </returns>
+    public static bool FindItem(string objectName, out ForgeUIObject? forgeObject)
+    {
+        forgeObject = null;
+        foreach (var category in Categories.Values)
+        {
+            if (category.FindItem(objectName, out forgeObject))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    /// <summary>
+    /// Find an item within any category using the object name
+    /// </summary>
+    /// <param name="id"> The ObjectId of the forge UI object </param>
+    /// <param name="forgeObject"> The forge UI object that was found </param>
+    /// <returns> bool if the object exists </returns>
+    public static bool FindItem(ObjectId id, out ForgeUIObject? forgeObject)
+    {
+        forgeObject = null;
+        foreach (var cateogry in Categories.Values)
+        {
+            if (cateogry.FindItem(id, out forgeObject))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
