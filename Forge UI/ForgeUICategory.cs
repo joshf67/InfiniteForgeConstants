@@ -46,4 +46,30 @@ public abstract class ForgeUICategory
         var folder = CategoryFolders[folderName];
         folder.AddItem(forgeUIObject);
     }
+    
+    public bool FindItem(string objectName, out ForgeUIObject? forgeObject)
+    {
+        forgeObject = null;
+        foreach (var folder in CategoryFolders.Values)
+        {
+            if (folder.FindItem(objectName, out forgeObject))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool FindItem(ObjectId id, out ForgeUIObject? forgeObject)
+    {
+        forgeObject = null;
+        foreach (var folder in CategoryFolders.Values)
+        {
+            if (folder.FindItem(id, out forgeObject))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

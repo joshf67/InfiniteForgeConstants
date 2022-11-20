@@ -41,4 +41,16 @@ public abstract class ForgeUIFolder
 
         FolderObjects.Add(forgeUiObject.ObjectName, forgeUiObject);
     }
+    
+    public bool FindItem(string objectName, out ForgeUIObject? forgeObject)
+    {
+        return FolderObjects.TryGetValue(objectName, out forgeObject);
+    }
+    
+    public bool FindItem(ObjectId id, out ForgeUIObject? forgeObject)
+    {
+        forgeObject = null;
+        string objectName = Enum.GetName(typeof(ObjectId), id);
+        return objectName != null && FolderObjects.TryGetValue(objectName, out forgeObject);
+    }
 }
