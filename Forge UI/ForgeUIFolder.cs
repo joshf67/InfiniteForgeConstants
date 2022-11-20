@@ -1,5 +1,6 @@
 using System.Numerics;
 using System.Text.Json.Serialization;
+using InfiniteForgeConstants.ObjectSettings;
 
 namespace InfiniteForgeConstants.Forge_UI;
 
@@ -18,7 +19,7 @@ public abstract class ForgeUIFolder
         FolderOffset = folderOffset;
     }
 
-    public ForgeUIObject AddItem(string objectName, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, int objectOrder = -1)
+    public ForgeUIObject AddItem(string objectName,ObjectId objectId, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, int objectOrder = -1)
     {
         if (FolderObjects.ContainsKey(objectName))
             throw new InvalidOperationException($"Object {objectName} already exists inside folder.");
@@ -26,6 +27,7 @@ public abstract class ForgeUIFolder
         if (objectOrder == -1) objectOrder = FolderObjects.Count + 1;
 
         var ret = new ForgeUIObject(objectName, objectOrder, defaultObjectMode, defaultScale, this);
+        ret.ObjectId = objectId; //todo add this to the ctor of the uiobject
         FolderObjects.Add(objectName, ret);
         return ret;
     }

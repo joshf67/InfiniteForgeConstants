@@ -1,5 +1,6 @@
 using System.Numerics;
 using System.Text.Json.Serialization;
+using InfiniteForgeConstants.ObjectSettings;
 
 namespace InfiniteForgeConstants.Forge_UI;
 
@@ -10,6 +11,7 @@ public class ForgeUIObject
     public int ObjectOrder;
     public Vector3 DefaultScale;
     public ForgeUIObjectModeEnum DefaultObjectMode;
+    public ObjectId ObjectId;
 
     public ForgeUIObject(string objectName, int objectOrder, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, ForgeUIFolder? parent = null)
     {
