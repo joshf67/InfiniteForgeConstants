@@ -13,12 +13,14 @@ public class ForgeUIObject
     public ForgeUIObjectModeEnum DefaultObjectMode;
     public ObjectId ObjectId;
 
-    public ForgeUIObject(string objectName, int objectOrder, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, ForgeUIFolder? parent = null)
+    public ForgeUIObject(string objectName, int objectOrder, ObjectId objectId,
+        ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.NONE, Vector3? defaultScale = null,
+        ForgeUIFolder? parent = null)
     {
         ParentFolder = parent;
         ObjectName = objectName;
         ObjectOrder = objectOrder;
-        DefaultScale = defaultScale ?? Vector3.One;
-        DefaultObjectMode = defaultObjectMode ?? ForgeUIObjectModeEnum.STATIC;
+        DefaultScale = defaultScale ?? Vector3.Zero;
+        DefaultObjectMode = defaultObjectMode ?? ForgeUIObjectModeEnum.NONE;
     }
 }

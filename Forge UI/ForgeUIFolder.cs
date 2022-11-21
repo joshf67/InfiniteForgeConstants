@@ -36,7 +36,7 @@ public abstract class ForgeUIFolder
 
         if (objectOrder == -1) objectOrder = FolderObjects.Count + 1;
 
-        var ret = new ForgeUIObject(objectName, objectOrder, defaultObjectMode, defaultScale, this);
+        var ret = new ForgeUIObject(objectName, objectOrder,objectId, defaultObjectMode, defaultScale, this);
         ret.ObjectId = objectId; //todo add this to the ctor of the uiobject
         FolderObjects.Add(objectName, ret);
         return ret;
