@@ -1,4 +1,4 @@
-namespace InfiniteForgeConstants.Forge_UI;
+namespace InfiniteForgeConstants.Forge_UI.Object_Properties;
 
 public enum ForgeUIObjectModeEnum
 {

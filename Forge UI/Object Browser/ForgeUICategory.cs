@@ -1,7 +1,8 @@
 using System.Numerics;
+using InfiniteForgeConstants.Forge_UI.Object_Properties;
 using InfiniteForgeConstants.ObjectSettings;
 
-namespace InfiniteForgeConstants.Forge_UI;
+namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
 
 /// <summary>
 /// Stores any data related to the forge categories inside the content browser

@@ -1,8 +1,9 @@
 using System.Numerics;
 using System.Text.Json.Serialization;
+using InfiniteForgeConstants.Forge_UI.Object_Properties;
 using InfiniteForgeConstants.ObjectSettings;
 
-namespace InfiniteForgeConstants.Forge_UI;
+namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
 
 public abstract class ForgeUIFolder
 {

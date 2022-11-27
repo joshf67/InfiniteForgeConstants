@@ -1,4 +1,5 @@
 using System.Numerics;
+using InfiniteForgeConstants.Forge_UI.Object_Properties;
 using InfiniteForgeConstants.ObjectSettings;
 
 namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
