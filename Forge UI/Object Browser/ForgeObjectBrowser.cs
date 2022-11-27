@@ -61,4 +61,19 @@ public static class ForgeObjectBrowser
         }
         return false;
     }
+    
+    /// <summary>
+    /// Add an item to a the object browser
+    /// </summary>
+    /// <param name="categoryName"> The cateogry to add the forge UI object to </param>
+    /// <param name="folderName"> The folder to add the forge UI object to </param>
+    /// <param name="forgeUIObject"> The forge UI Object to add </param>
+    /// <exception cref="InvalidOperationException"> Throws if the cateogry doesn't exist </exception>
+    public static void AddItem(string categoryName, string folderName, ForgeUIObject forgeUIObject)
+    {
+        if (!Categories.ContainsKey(categoryName))
+            throw new InvalidOperationException($"Cateogry {categoryName} doesn't exist in the Object Browser.");
+
+        Categories[categoryName].AddItem(folderName, forgeUIObject);
+    }
 }
