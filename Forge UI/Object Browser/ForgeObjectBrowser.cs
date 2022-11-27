@@ -63,9 +63,9 @@ public static class ForgeObjectBrowser
     }
     
     /// <summary>
-    /// Add an item to a the object browser
+    /// Add an item to the object browser
     /// </summary>
-    /// <param name="categoryName"> The cateogry to add the forge UI object to </param>
+    /// <param name="categoryName"> The category to add the forge UI object to </param>
     /// <param name="folderName"> The folder to add the forge UI object to </param>
     /// <param name="forgeUIObject"> The forge UI Object to add </param>
     /// <exception cref="InvalidOperationException"> Throws if the cateogry doesn't exist </exception>

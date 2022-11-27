@@ -29,7 +29,9 @@ public abstract class ForgeUIFolder
     /// <param name="objectOrder"> The order of this forgeUIObject in the content browser UI </param>
     /// <returns> the ForgeUIObject generated </returns>
     /// <exception cref="InvalidOperationException"> Throws if the folder doesn't exist </exception>
-    public ForgeUIObject AddItem(string objectName,ObjectId objectId, ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null, int objectOrder = -1)
+    public ForgeUIObject AddItem(string objectName,ObjectId objectId,
+        ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC,
+        Vector3? defaultScale = null, int objectOrder = -1)
     {
         if (FolderObjects.ContainsKey(objectName))
             throw new InvalidOperationException($"Object {objectName} already exists inside folder.");
