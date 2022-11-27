@@ -54,8 +54,7 @@ public abstract class ForgeUICategory
         if (!CategoryFolders.ContainsKey(folderName))
             throw new InvalidOperationException($"Folder {folderName} doesn't exist in this category.");
 
-        var folder = CategoryFolders[folderName];
-        return folder.AddItem(objectName, objectId, defaultObjectMode, defaultScale, objectOrder);
+        return CategoryFolders[folderName].AddItem(objectName, objectId, defaultObjectMode, defaultScale, objectOrder);
     }
 
     /// <summary>

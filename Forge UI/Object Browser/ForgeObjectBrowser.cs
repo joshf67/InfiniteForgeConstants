@@ -1,3 +1,4 @@
+using System.Numerics;
 using InfiniteForgeConstants.ObjectSettings;
 
 namespace InfiniteForgeConstants.Forge_UI.Object_Browser;
@@ -60,6 +61,27 @@ public static class ForgeObjectBrowser
             }
         }
         return false;
+    }
+    
+    /// <summary>
+    /// Add an item to the object browser
+    /// </summary>
+    /// <param name="categoryName"> The category to add the forge UI object to </param>
+    /// <param name="folderName"> The folder to add the forge UI object to </param>
+    /// <param name="objectName"> The name of the forgeUIObject to add </param>
+    /// <param name="objectId"> The ObjectId of the forgeUIObject to add </param>
+    /// <param name="defaultObjectMode"> The default object mode of this forgeUIObject </param>
+    /// <param name="defaultScale"> The default scale of this forgeUIObject </param>
+    /// <param name="objectOrder"> The order of this forgeUIObject in the content browser UI </param>
+    /// <exception cref="InvalidOperationException"> Throws if the cateogry doesn't exist </exception>
+    public static void AddItem(string categoryName, string folderName, string objectName, ObjectId objectId,
+        ForgeUIObjectModeEnum? defaultObjectMode = ForgeUIObjectModeEnum.STATIC, Vector3? defaultScale = null,
+        int objectOrder = -1)
+    {
+        if (!Categories.ContainsKey(categoryName))
+            throw new InvalidOperationException($"Category {categoryName} doesn't exist in the Object Browser.");
+
+        Categories[categoryName].AddItem(folderName, objectName, objectId, defaultObjectMode, defaultScale, objectOrder);
     }
     
     /// <summary>
