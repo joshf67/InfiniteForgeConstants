@@ -2,6 +2,18 @@ namespace InfiniteForgeConstants.Forge_UI.Object_Properties;
 
 public static class ObjectPropertiesOptions
 {
+    public static int GetPropertyIndex(ObjectPropertyName property, ForgeUIObjectModeEnum objectMode)
+    {
+        return objectMode switch
+        {
+            ForgeUIObjectModeEnum.STATIC => StaticOnly[property],
+            ForgeUIObjectModeEnum.DYNAMIC => DynamicOnly[property],
+            ForgeUIObjectModeEnum.STATIC_FIRST => StaticByDefault[property],
+            ForgeUIObjectModeEnum.DYNAMIC_FIRST => DynamicByDefault[property],
+            _ => throw new ArgumentOutOfRangeException(nameof(objectMode), objectMode, null)
+        };
+    }
+    
     public static Dictionary<ObjectPropertyName, int> StaticOnly = new()
     {
         { ObjectPropertyName.GeneralDropdown, 0 },
