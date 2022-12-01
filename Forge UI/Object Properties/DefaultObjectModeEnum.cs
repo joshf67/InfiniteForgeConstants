@@ -6,5 +6,6 @@ public enum ForgeUIObjectModeEnum
     STATIC = 0,
     DYNAMIC = 1,
     STATIC_FIRST = 2,
-    DYNAMIC_FIRST = 3
+    DYNAMIC_FIRST = 3,
+    DYNAMIC_FIRST_VARIANT = 4
 }

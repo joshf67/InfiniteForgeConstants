@@ -10,6 +10,7 @@ public static class ObjectPropertiesOptions
             ForgeUIObjectModeEnum.DYNAMIC => DynamicOnly[property],
             ForgeUIObjectModeEnum.STATIC_FIRST => StaticByDefault[property],
             ForgeUIObjectModeEnum.DYNAMIC_FIRST => DynamicByDefault[property],
+            ForgeUIObjectModeEnum.DYNAMIC_FIRST_VARIANT => DynamicByDefaultVariant[property],
             _ => throw new ArgumentOutOfRangeException(nameof(objectMode), objectMode, null)
         };
     }
@@ -92,5 +93,25 @@ public static class ObjectPropertiesOptions
         { ObjectPropertyName.Pitch, 12 },
         { ObjectPropertyName.Roll, 13 },
         { ObjectPropertyName.Reset, 14 }
+    };
+    
+    public static Dictionary<ObjectPropertyName, int> DynamicByDefaultVariant = new()
+    {
+        { ObjectPropertyName.GeneralDropdown, 0 },
+        { ObjectPropertyName.ObjectName, 1 },
+        { ObjectPropertyName.ObjectModeDropdown, 2 },
+        { ObjectPropertyName.ObjectMode, 3 },
+        { ObjectPropertyName.Variant, 4 },
+        { ObjectPropertyName.Physics, 5 },
+        { ObjectPropertyName.TransformDropdown, 6 },
+        { ObjectPropertyName.PositionDropdown, 7 },
+        { ObjectPropertyName.Forward, 8 },
+        { ObjectPropertyName.Horizontal, 9 },
+        { ObjectPropertyName.Vertical, 10 },
+        { ObjectPropertyName.RotationDropdown, 11 },
+        { ObjectPropertyName.Yaw, 12 },
+        { ObjectPropertyName.Pitch, 13 },
+        { ObjectPropertyName.Roll, 14 },
+        { ObjectPropertyName.Reset, 15 }
     };
 }

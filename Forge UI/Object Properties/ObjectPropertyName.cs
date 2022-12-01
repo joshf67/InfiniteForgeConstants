@@ -6,6 +6,7 @@ public enum ObjectPropertyName
     ObjectName,
     ObjectModeDropdown,
     ObjectMode,
+    Variant,
     SizeX,
     SizeY,
     SizeZ,
