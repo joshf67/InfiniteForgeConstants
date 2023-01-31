@@ -1,6 +1,7 @@
 // ReSharper disable InconsistentNaming
 // ReSharper disable IdentifierTypo
 // ReSharper disable CheckNamespace
+
 #pragma warning disable CS1591
 
 namespace InfiniteForgeConstants.MapSettings;
@@ -11,13 +12,21 @@ namespace InfiniteForgeConstants.MapSettings;
 public enum MapId
 {
     AQUARIUS = -1598071734,
-    BEHEMOTH= -1449092339,
-    BREAKER= 847557134,
-    CATALYST= -1044063363,
-    FRAGMENTATION= -340635692,
-    HIGH_POWER= -2109972058,
-    LAUNCH_SITE= -738424322,
-    LIVE_FIRE= 1253388187,
-    RECHARGE= -687782121,
-    DEADLOCK= -785503777,
+    BEHEMOTH = -1449092339,
+    BREAKER = 847557134,
+    CATALYST = -1044063363,
+    FRAGMENTATION = -340635692,
+    HIGH_POWER = -2109972058,
+    LAUNCH_SITE = -738424322,
+    LIVE_FIRE = 1253388187,
+    RECHARGE = -687782121,
+    DEADLOCK = -785503777,
+
+    //Canvas
+    Arid = 1804860316,
+    Ecliptic = -747133697,
+    Institute = 1437677928,
+    Mires = 88891201,
+    Seafloor = 2123870979,
+    Void = 426470249
 }
