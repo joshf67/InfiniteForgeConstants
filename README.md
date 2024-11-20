@@ -1,6 +1,6 @@
 # InfiniteForgeConstants
 
-## This project is still in development but is currently DOA due to 343's stance on user generated content
+## This project has been archived as no work has been done on it ever since 343's stance on user generated content was published on forge release
 
 A baseline data structure of halo infinite's forge objects to increase code interoperability.
 
